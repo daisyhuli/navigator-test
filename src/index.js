@@ -1,13 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './style/index.css';
-import { Provider } from 'react-redux'
-import Home from './pages/Home';
-import Store from './store';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./style/index.scss";
+import { Provider } from "react-redux";
+import Store from "./store";
+import Route from "@/router";
 
-
-ReactDOM.render(
+const render = Component => {
+  ReactDOM.render(
     <Provider store={Store}>
-        <Home />
-    </Provider>
-, document.getElementById('root'));
+      <Component />
+    </Provider>,
+    document.getElementById("root")
+  );
+};
+
+render(Route);
+
+if (module.hot) {
+  module.hot.accept("./router/", () => {
+    render(Route);
+  });
+} 

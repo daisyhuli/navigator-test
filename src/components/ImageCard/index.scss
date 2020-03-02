@@ -1,0 +1,36 @@
+@import "../../style/theme.scss";
+
+.image-container{
+    position: relative;
+    height: 94px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: 1.2s;
+    cursor: pointer;
+    &:hover{
+        background-size: 110% 110% !important;
+    }
+    .image-text-box{
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+    }
+    .image-class{
+        font-weight: 800;
+        color: $menu-hightlight;
+        margin-right: 10px;
+    }
+    .triangle{
+        @include triangle($menu-hightlight)
+    }
+    &.premier{
+        @include bg-menu('premier')
+    }
+    &.premier-plus{
+        @include bg-menu('premier-plus')
+    }
+    &.catamaran{
+        @include bg-menu('catamaran')
+    }
+}
+

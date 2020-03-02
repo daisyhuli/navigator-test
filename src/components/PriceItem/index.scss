@@ -1,0 +1,111 @@
+@import "../../style/theme.scss";
+.coupon {
+  transition:transform .5s;
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover{
+    transform: translateY(-5px);
+    .coupon-top{
+      box-shadow: 0 0 3px 1px $primary;
+    }
+    .coupon-bottom:not(.sold-out){
+      box-shadow: 0 1px 3px 0 $primary;
+    }
+    .coupon-bottom:not(.sold-out):before{
+      box-shadow:inset -1px 1px 0 0 $primary;
+    }
+    .coupon-bottom:not(.sold-out):after{
+      box-shadow:inset -1px 1px 0 0 $primary;
+    }
+  }
+    .coupon-top {
+      width: 86px;
+      height: 62px;
+      border: 1px solid $primary;
+      border-bottom-style: dashed;
+      border-radius: 8px 8px 0 0;
+      background-color: $fill-text;
+      padding-top: 5px;
+      transition:box-shadow .5s;
+      .price {
+        font-weight: bold;
+      }
+      .origin-price {
+        text-decoration: line-through;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: $text;
+      }
+      .discount-price {
+        color: $text-highlight;
+        font-size: 18px;
+      }
+    }
+  
+    .coupon-bottom {
+      width: 86px;
+      height: 24px;
+      line-height: 24px;
+      border: 1px solid $border;
+      border-radius: 0 0 8px 8px;
+      border-top: 0px;
+      position: relative;
+      background-color: $fill-text;
+      transition:box-shadow .5s;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: -9px;
+        width: 16px;
+        height: 16px;
+        border-radius: 30px;
+        border: 1px solid $border;
+        border-bottom-color: $fill-text;
+        border-left-color: $fill-text;
+        background-color: $fill-text;
+        transform: rotate(45deg);
+        transition:box-shadow .5s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: -9px;
+        width: 16px;
+        height: 16px;
+        border-radius: 30px;
+        border: 1px solid $border;
+        border-bottom-color: $fill-text;
+        border-left-color: $fill-text;
+        background-color: $fill-text;
+        transform: rotate(-135deg);
+        transition:box-shadow .5s;
+      }
+      .price-status{
+          font-size: 12px;
+          font-weight: 600;
+          &.available{
+            color: $status-primary;
+          }
+          &.lastspace{
+            color: $status-warning;
+          }
+          &.sold-out{
+            color:$status-error;
+            border-color: $fill-text;
+          }
+      }
+    }
+   
+    .sold-out {
+      border-color: $fill-text;
+    }
+    .sold-out:before {
+      border-right-color: $fill-text;
+    }
+    .sold-out:after {
+      border-top-color: $fill-text;
+    }
+   
+  }

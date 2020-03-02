@@ -1,0 +1,29 @@
+$primary: #d1d1d1;
+$text: #bbb;
+$menu-hightlight: #f1fb52;
+$fill-bg: #d95646;
+$fill-text: #fff;
+$text-highlight: rgb(217,63,113);
+$status-error: rgb(217,63,113);
+$status-warning: #e0c274;
+$status-primary: #bbb;
+$border: #e0e0e0;
+$asset-url: '../assets/';
+
+@mixin triangle($color: $primay, $scale: 5px) {
+    display: inline-block;
+    width:0;
+    height: 0;
+    border-style:solid;
+    border-top: $scale solid transparent;
+    border-left: $scale * 2-1px  solid $color;
+    border-right: 0px solid transparent;
+    border-bottom: $scale solid transparent;
+    cursor: pointer;
+}
+
+@mixin bg-menu($name) {
+    background-image: url($asset-url + $name + '.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

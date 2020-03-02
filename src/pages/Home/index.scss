@@ -1,0 +1,20 @@
+.container-home{
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 40px;
+    .left-part{
+        width: 212px;
+        padding: 0 15px;
+        .logo{
+            width: 182px;
+            margin-bottom: 10px;
+        }
+    }
+    .right-part{
+        position: relative;
+        width: 768px;
+        padding-left: 10px;
+    }
+    
+}
