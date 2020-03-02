@@ -1,12 +1,10 @@
 # navigator-test
 
-### 个人总结
-
+### Project Summary
 This project structure is nearly one of my best practices as developing large projects.
 
 ### deploy
-
-本项目已部署在服务器xxx 可直接访问...
+This project has been deployed on the server https://pure-beyond-88427.herokuapp.com/ that can be accessed directly
 
 ### run this project
 
@@ -17,15 +15,11 @@ This project structure is nearly one of my best practices as developing large pr
 ```
 
 ### api
-
-使用axios 并集成了常用功能于一类，规范了接口的书写标准, 配合 config 可实现多环境自动切换
+Uses axios and integrates common functions into one class, standardizes the writing standard of the interface, and cooperates with config to achieve automatic switching in multiple environments
 
 ### redux 
-
-以模块化方式构建, 按业务/组件划分模块均可
+Built in a modular manner, modules can be divided by business/component
 
 ### router
-
-组件懒加载模式 + hot update
-
+Component lazy loading mode + hot update
 
